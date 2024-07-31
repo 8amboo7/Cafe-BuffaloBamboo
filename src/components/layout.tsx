@@ -1,5 +1,5 @@
 import { Box, Group } from "@mantine/core";
-import websiteLogo from "../assets/website-logo.png";
+import websiteLogo from "../assets/logo.webp";
 import { Link } from "react-router-dom";
 
 interface LayoutProps {
@@ -10,7 +10,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Box>
-        <header className="h-14 px-8 border border-t-0 border-x-0 border-solid border-neutral-200 bg-white">
+        <header className="h-14 px-8 border border-t-0 border-x-0 border-solid border-neutral-200 bg-[#EED3D9]">
           <div className="flex justify-between">
             <div>
               <img src={websiteLogo} alt="Logo" className="h-14 w-auto" />

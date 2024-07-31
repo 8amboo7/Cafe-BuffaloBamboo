@@ -1,66 +1,54 @@
 import Layout from "../components/layout";
-import cafeBackgroundImage from "../assets/images/bg-cafe-1.jpg";
-import ajPanwitImage from "../assets/images/aj-panwit.jpg";
-import coffeeImage from "../assets/images/coffee-1.jpg";
-import bnktImage from "../assets/images/bnkt.png";
+import cafeBackgroundImage from "../assets/images/1.png";
+import ajPanwitImage from "../assets/images/2.png";
+import coffeeImage from "../assets/images/4.png";
+import bnktImage from "../assets/images/3.png";
 
 export default function HomePage() {
   return (
     <Layout>
       <section
-        className="h-[500px] w-full text-white bg-orange-800 bg-cover bg-blend-multiply flex flex-col justify-center items-center px-4 text-center"
+        className="h-[500px] w-full text-white bg-cover bg-blend-multiply flex flex-col justify-center items-center px-4 text-center"
         style={{
           backgroundImage: `url(${cafeBackgroundImage})`,
         }}
       >
-        <h1 className="text-5xl mb-2">ยินดีต้อนรับสู่ IoT Library & Cafe</h1>
-        <h2>ร้านกาแฟที่มีหนังสืออยู่นิดหน่อยให้คุณได้อ่าน</h2>
+        <h1 className="text-5xl mb-2">ยินดีต้อนรับสู่ BuffaloBamboo</h1>
+        <h2>
+          คาเฟ่สีชมพูที่จะดื่มกาแฟและมีหนังสือนิยายเกย์ในร้านมากมาย
+          รวมถึงมีควายให้คุณได้ลองขี่
+        </h2>
       </section>
 
-      <section className="container mx-auto py-8">
+      <section className="flex flex-col container mx-auto py-8 gap-3 h-fit">
         <h1>เกี่ยวกับเรา</h1>
 
-        <div className="grid grid-cols-3 gap-4">
-          <p className="text-left col-span-2">
-            IoT Library & Cafe เป็นร้านกาแฟที่มีหนังสืออยู่นิดหน่อยให้คุณได้อ่าน
-            และเรียนรู้เรื่องใหม่ๆ ที่เกี่ยวกับเทคโนโลยี IoT โดยคาเฟ่ของเรานั้น
-            ก่อตั้งขึ้นโดย ผศ.ดร. ปานวิทย์ ธุวะนุติ ซึ่งเป็นอาจารย์ในวิชา
-            Internet of Things และนายกฤตณัฏฐ์ ศิริพรนพคุณ เป็นผู้ช่วยสอนในหัวข้อ
-            FastAPI และ React ในวิชานี้
+        <div className="grid grid-cols-2 gap-4 h-fit">
+          <p className="text-left col-span-1 text-2xl h-fit">
+            BuffaloBamboo Café คาเฟ่สีชมพูทรงควายสุดปังที่คุณจะต้องหลงรัก!
+            ที่นี่มีทุกอย่างที่คุณต้องการ ไม่ว่าจะเป็นกาแฟรสชาติเยี่ยม
+            หนังสือนิยายเกย์เพียบ และแน่นอน ควายให้ขี่! คุณสามารถจิบกาแฟไป
+            อ่านนิยายไป พร้อมกับขี่ควายไปรอบๆ คาเฟ่ได้ รับรองว่าเพื่อนๆ
+            จะต้องอิจฉาที่คุณได้มาที่นี่
           </p>
 
           <div>
             <img
               src={ajPanwitImage}
               alt="Panwit Tuwanut"
-              className="h-full w-full object-cover"
+              className=" h-64 w-full object-cover"
             />
           </div>
         </div>
       </section>
 
-      <section className="container mx-auto py-8">
-        <h1>ปัจจุบันคาเฟ่ และห้องสมุดของเรา อยู่ในช่วงการดูแลของ</h1>
-        <h2>ผู้ดูแลร้านอันดับ 1 (อู้เก่ง)</h2>
+      <section className="flex gap-2 flex-col container mx-auto py-8">
+        <h1>
+          ปัจจุบันคาเฟ่ และห้องสมุดของเรา
+          อยู่ในช่วงการดูแลของแบมบูศรุตาโทรัตน์65070211lnwza0071234zazaja
+        </h1>
 
         <div className="grid grid-cols-3 gap-4">
-          <p className="text-left col-span-2">
-            นายคนนี้ชื่อ นายกิตติภณ ทัศนเปรมสิน รหัสนักศึกษา 65070021
-            นักศึกษาชั้นปีที่ 3 ได้เข้ารับการฝึกงานที่ IoT Library & Cafe
-            นี้โดยได้รับการรับรองจาก ผศ.ดร. ปานวิทย์ ธุวะนุติ และนายกฤตณัฏฐ์
-            ศิริพรนพคุณ ให้เข้ามาเป็นผู้ดูแลร้านอันดับ 1 ของร้านนี้
-            โดยเขามีความสามารถในการดูแลร้านและห้องสมุดของเราอย่างมืออาชีพ
-            (การอู้) โดยทางร้านเรามีบริการอาหารและเครื่องดื่มที่อร่อย
-            และมีหนังสือที่หลากหลายให้คุณได้อ่านและเรียนรู้เรื่องใหม่ๆ
-            ซึ่งเครื่องดื่มต่างๆ ราคาค่อนข้างถูก(มั้ง) อาหารก็อร่อย(แหละ)
-            ระหว่างที่นายคนนี้ดูแลร้านนายคนนี้ได้ตั้งใจทำงาน(นอน)
-            และดูแลลูกค้าเป็นอย่างดีเสมอมา(ด่าทั้งร้าน)
-            และเป็นคนที่มีความสุภาพและเป็นกันเองกับลูกค้าทุกคน(แต่ก็ด่าทั้งร้าน)
-            สุดท้ายขอให้ระวังบุคคลดักล่าวไว้ด้วยนะครับ เนื่องจากผศ.ดร. ปานวิทย์
-            ธุวะนุติ และนายกฤตณัฏฐ์ ศิริพรนพคุณ ได้เตะตูดไล่ออกจากร้านไปแล้ว
-            อิอิ
-          </p>
-
           <div>
             <img
               src={bnktImage}
@@ -68,6 +56,16 @@ export default function HomePage() {
               className="h-full w-full object-cover"
             />
           </div>
+
+          <p className="text-left col-span-2 text-2xl">
+            เจ้าของร้านชื่อนางสาวศรุตา โทรัตน์ รหัสนักศึกษา 65070211 อายุ 20 ปี
+            4 เดือน 9 วัน เกิดอาการท้อแท้ในชีวิต
+            เลยกำเงินก้อนสุดท้ายมาลงทุนเปิดร้านคาเฟ่กับควายที่ซื้อมาตอนโดนพ่อแม่ด่าว่า
+            ขี้เกียจเรียนขนาดนี้ ออกมาเลี้ยงควายเถอะ
+            ชอบอ่านนิยายเกย์จนที่บ้านไม่มีที่จะเก็บ เลยเอามาไว้ที่ร้าน
+            ลูกค้าชอบมาก ไม่สนใจควายเลย สนแต่นิยายเกย์ กาแฟก็ไม่สั่ง
+            นั่งทั้งวันทั้งคืน
+          </p>
         </div>
       </section>
 
