@@ -1,5 +1,5 @@
 import Layout from "../components/layout";
-import cafeBackgroundImage from "../assets/images/bg-cafe-2.jpg";
+import cafeBackgroundImage from "../assets/images/5.webp";
 import useSWR from "swr";
 import { Book } from "../lib/models";
 import Loading from "../components/loading";
@@ -14,13 +14,13 @@ export default function BooksPage() {
     <>
       <Layout>
         <section
-          className="h-[500px] w-full text-white bg-orange-800 bg-cover bg-blend-multiply flex flex-col justify-center items-center px-4 text-center"
+          className="h-[500px] w-full text-white bg-cover bg-blend-multiply flex flex-col justify-center items-center px-4 text-center"
           style={{
             backgroundImage: `url(${cafeBackgroundImage})`,
           }}
         >
-          <h1 className="text-5xl mb-2">หนังสือ</h1>
-          <h2>รายการหนังสือทั้งหมด</h2>
+          <h1 className="text-5xl mb-2">หนังสือเกย์</h1>
+          <h2>รายการหนังสือเกย์ทั้งหมด</h2>
         </section>
 
         <section className="container mx-auto py-8">
@@ -32,8 +32,9 @@ export default function BooksPage() {
               leftSection={<IconPlus />}
               to="/books/create"
               size="xs"
-              variant="primary"
-              className="flex items-center space-x-2"
+              variant="filled"
+              color="pink"
+              className="flex items-center space-x-2 "
             >
               เพิ่มหนังสือ
             </Button>
