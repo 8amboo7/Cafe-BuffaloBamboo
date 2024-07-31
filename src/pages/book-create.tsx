@@ -1,6 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/layout";
-import { Button, Checkbox, Container, Divider, NumberInput, TextInput } from "@mantine/core";
+import {
+  Button,
+  Checkbox,
+  Container,
+  Divider,
+  NumberInput,
+  TextInput,
+} from "@mantine/core";
 import { isNotEmpty, useForm } from "@mantine/form";
 import { useState } from "react";
 import axios, { AxiosError } from "axios";
@@ -17,6 +24,9 @@ export default function BookCreatePage() {
       title: "",
       author: "",
       year: 2024,
+      detail: "",
+      story: "",
+      classification: "",
       is_published: false,
     },
 
@@ -24,6 +34,9 @@ export default function BookCreatePage() {
       title: isNotEmpty("กรุณาระบุชื่อหนังสือ"),
       author: isNotEmpty("กรุณาระบุชื่อผู้แต่ง"),
       year: isNotEmpty("กรุณาระบุปีที่พิมพ์หนังสือ"),
+      detail: isNotEmpty("กรุณาระบุรายละเอียดหนังสือ"),
+      story: isNotEmpty("กรุณาระบุเรื่องย่อหนังสือ"),
+      classification: isNotEmpty("กรุณาระบุหมวดหมู่หนังสือ"),
     },
   });
 
@@ -55,7 +68,8 @@ export default function BookCreatePage() {
       } else {
         notifications.show({
           title: "เกิดข้อผิดพลาดบางอย่าง",
-          message: "กรุณาลองใหม่อีกครั้ง หรือดูที่ Console สำหรับข้อมูลเพิ่มเติม",
+          message:
+            "กรุณาลองใหม่อีกครั้ง หรือดูที่ Console สำหรับข้อมูลเพิ่มเติม",
           color: "red",
         });
       }
@@ -70,7 +84,10 @@ export default function BookCreatePage() {
         <Container className="mt-8">
           <h1 className="text-xl">เพิ่มหนังสือในระบบ</h1>
 
-          <form onSubmit={bookCreateForm.onSubmit(handleSubmit)} className="space-y-8">
+          <form
+            onSubmit={bookCreateForm.onSubmit(handleSubmit)}
+            className="space-y-8"
+          >
             <TextInput
               label="ชื่อหนังสือ"
               placeholder="ชื่อหนังสือ"
@@ -92,8 +109,23 @@ export default function BookCreatePage() {
             />
 
             {/* TODO: เพิ่มรายละเอียดหนังสือ */}
+            <TextInput
+              label="รายละเอียดหนังสือ"
+              placeholder="รายละเอียดหนังสือ"
+              {...bookCreateForm.getInputProps("detail")}
+            />
             {/* TODO: เพิ่มเรื่องย่อ */}
+            <TextInput
+              label="เรื่องย่อ"
+              placeholder="เรื่องย่อ"
+              {...bookCreateForm.getInputProps("story")}
+            />
             {/* TODO: เพิ่มหมวดหมู่(s) */}
+            <TextInput
+              label="หมวดหมู่ (ขั้นด้วย , Ex. นิยาย,สารคดี)"
+              placeholder="หมวดหมู่"
+              {...bookCreateForm.getInputProps("classification")}
+            />
 
             <Checkbox
               label="เผยแพร่"
